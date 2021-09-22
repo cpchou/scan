@@ -1,0 +1,14 @@
+version: '2'
+services:
+  sca:
+    image: cpchou/scan-8
+    hostname: scan-8
+    container_name: scan-8
+    restart: always
+    privileged: true
+    volumes:
+      - /home/docker/sca/:/home/user
+    stdin_open: true
+    tty: true
+    entrypoint:
+      - 'sh'
